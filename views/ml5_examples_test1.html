@@ -38,6 +38,7 @@
 
         // draw image & classifier
         function imageReady(){
+            img.resize(0,400)
             resizeCanvas(img.width, img.height+60);
             background(100);
             image(img,0,0);
@@ -51,7 +52,7 @@
             }
             console.log(results);
             fill(255);
-            textSize(24);
+            textSize(20);
             text(results[0].label,0,height-30);
             text(nf(results[0].confidence*100,0,1)+'%',0,height-10);
         }
